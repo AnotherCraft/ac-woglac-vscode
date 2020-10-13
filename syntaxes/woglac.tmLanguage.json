@@ -1,0 +1,46 @@
+{
+  "scopeName": "source.woglac",
+  "patterns": [
+		{"include": "#lineComment"},
+		{"include": "#blockCOmment"},
+		{"include": "#type"},
+		{"include": "#keyword"},
+		{"include": "#function"},
+		{"include": "#blockLiteral"},
+		{"include": "#variable"}
+		],
+  "repository": {
+    "type": {
+			"name": "storage.type.woglac",
+      "match": "\\b(Float3?|Bool|Block|Biome)\\b"
+    },
+		"keyword": {
+			"name": "keyword",
+			"match": "\\bbiome\\b|(?<=\\bbiome\\s*\\(\\s*)\\b(nearest|weighted|nearestSet)\\b"
+		},
+		"function": {
+			"name": "entity.name.function.woglac",
+			"match": "\\b[a-zA-Z][a-zA-Z0-9]+\\s*(?=\\()"
+		},
+		"variable": {
+			"name": "entity.name.variable.woglac",
+			"match": "\\b[a-zA-Z][a-zA-Z0-9]+(?!\\s*\\()"
+		},
+		"blockLiteral": {
+			"name": "string.woglac",
+			"match": "\\bblock(\\.[a-zA-Z][a-zA-Z0-9]+)+"
+		},
+		"lineComment": {
+			"name": "comment.line.woglac",
+			"match": "//.*\\n"
+		},
+		"blockComment": {
+			"name": "comment.block.woglac",
+			"begin": "/\\*",
+			"end": "\\*/",
+			"patterns": [
+				{"include": "#blockComment"}
+			]
+		}
+  }
+}

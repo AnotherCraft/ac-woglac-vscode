@@ -1,0 +1,31 @@
+{
+	"name": "woglac.vscode",
+	"version": "0.0.1",
+	"engines": {
+		"vscode": ">=0.9.0-pre.1"
+	},
+	"categories": [
+		"Programming Languages"
+	],
+	"publisher": "Danol",
+	"contributes": {
+		"languages": [
+			{
+				"id": "woglac",
+				"aliases": [
+					"WOGLAC"
+				],
+				"extensions": [
+					".woglac"
+				]
+			}
+		],
+		"grammars": [
+			{
+				"language": "woglac",
+				"scopeName": "source.woglac",
+				"path": "./syntaxes/woglac.tmLanguage.json"
+			}
+		]
+	}
+}
