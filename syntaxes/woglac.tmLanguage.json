@@ -2,7 +2,8 @@
   "scopeName": "source.woglac",
   "patterns": [
 		{"include": "#lineComment"},
-		{"include": "#blockCOmment"},
+		{"include": "#blockComment"},
+		{"include": "#biomeInterpolationMode"},
 		{"include": "#type"},
 		{"include": "#keyword"},
 		{"include": "#function"},
@@ -16,7 +17,11 @@
     },
 		"keyword": {
 			"name": "keyword",
-			"match": "\\bbiome\\b|(?<=\\bbiome\\s*\\(\\s*)\\b(nearest|weighted|nearestSet)\\b"
+			"match": "\\bbiome\\b"
+		},
+		"biomeInterpolationMode": {
+			"name": "string.blockInterpolationMode.woglac",
+			"match": "(?<=\\bbiome\\s*\\(\\s*)\\b(nearest|weighted|nearestSet)\\b"
 		},
 		"function": {
 			"name": "entity.name.function.woglac",
@@ -27,7 +32,7 @@
 			"match": "\\b[a-zA-Z][a-zA-Z0-9]+(?!\\s*\\()"
 		},
 		"blockLiteral": {
-			"name": "string.woglac",
+			"name": "string.blockLiteral.woglac",
 			"match": "\\bblock(\\.[a-zA-Z][a-zA-Z0-9]+)+"
 		},
 		"lineComment": {
