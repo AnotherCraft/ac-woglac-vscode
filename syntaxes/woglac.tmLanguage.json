@@ -3,37 +3,37 @@
   "patterns": [
 		{"include": "#lineComment"},
 		{"include": "#blockComment"},
-		{"include": "#biomeInterpolationMode"},
 		{"include": "#type"},
+		{"include": "#blockLiteral"},
+		{"include": "#stringLiteral"},
 		{"include": "#keyword"},
 		{"include": "#function"},
-		{"include": "#blockLiteral"},
 		{"include": "#variable"}
 		],
   "repository": {
     "type": {
 			"name": "storage.type.woglac",
-      "match": "\\b(Float3?|Bool|Block|Biome)\\b"
+      "match": "\\b(Float[23]?|Bool|Block)\\b"
     },
 		"keyword": {
 			"name": "keyword",
-			"match": "\\bbiome\\b"
-		},
-		"biomeInterpolationMode": {
-			"name": "string.blockInterpolationMode.woglac",
-			"match": "(?<=\\bbiome\\s*\\(\\s*)\\b(nearest|weighted|nearestSet)\\b"
+			"match": "\\b(biome|namespace|include|pragma|rule|param|component|true|false|block|area|node|condition|extend|override|void)\\b"
 		},
 		"function": {
 			"name": "entity.name.function.woglac",
-			"match": "\\b[a-zA-Z][a-zA-Z0-9]+\\s*(?=\\()"
+			"match": "\\b[a-zA-Z][a-zA-Z0-9]*\\s*(?=\\()"
 		},
 		"variable": {
 			"name": "entity.name.variable.woglac",
-			"match": "\\b[a-zA-Z][a-zA-Z0-9]+(?!\\s*\\()"
+			"match": "\\b[a-zA-Z][a-zA-Z0-9_]*(?!\\s*\\()"
 		},
 		"blockLiteral": {
 			"name": "string.blockLiteral.woglac",
-			"match": "\\bblock(\\.[a-zA-Z][a-zA-Z0-9]+)+"
+			"match": "\\bblock(\\.[a-zA-Z][a-zA-Z0-9_]*)+"
+		},
+		"stringLiteral": {
+			"name": "string.stringLiteral.woglac",
+			"match": "\"[^\"]*\""
 		},
 		"lineComment": {
 			"name": "comment.line.woglac",
