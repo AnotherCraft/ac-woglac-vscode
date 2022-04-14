@@ -17,7 +17,7 @@
     },
 		"keyword": {
 			"name": "keyword",
-			"match": "\\b(biome|namespace|include|pragma|rule|param|component|true|false|block|area|node|condition|extend|override|void)\\b"
+			"match": "\\b(biome|namespace|include|pragma|rule|param|component|true|false|block|area|node|condition|extend|override|void|export)\\b"
 		},
 		"function": {
 			"name": "entity.name.function.woglac",
