@@ -4,4 +4,12 @@ VS Code extension adding basic syntax higlighting for the WOGLAC language.
 * AC Worldgen repo: https://github.com/AnotherCraft/ac-worldgen
 
 ## How to install
-Simply run `git clone https://github.com/AnotherCraft/ac-woglac-vscode` in the `%USERPROFILE%/.vscode/extensions` directory.
+Simply run
+```bash
+git clone https://github.com/AnotherCraft/ac-woglac-vscode
+```
+in the
+```bash
+%USERPROFILE%/.vscode/extensions
+```
+directory.
